@@ -46,4 +46,29 @@ public class HomePage implements iHomePage {
         return itemName.textContent().trim();
     }
 
+    @Override
+    public void clickProduct(String productName) {
+
+    }
+
+    @Override
+    public void clickUserIcon() {
+
+    }
+
+    @Override
+    public boolean verifySignedUpSuccess() {
+        return false;
+    }
+
+    @Override
+    public boolean verifySignedOutSuccess() {
+        return false;
+    }
+
+    @Override
+    public boolean verifySignedInSuccess() {
+        return false;
+    }
+
 }

@@ -38,6 +38,16 @@ public class BasePage implements BrowserManager {
         }
     }
 
+    @Override
+    public void clickElement(String element) {
+
+    }
+
+    @Override
+    public void fillElement(String element, String value) {
+
+    }
+
     public void closePage() {
         page.close();
     }
@@ -47,4 +57,5 @@ public class BasePage implements BrowserManager {
     public void closeBrowser() {
         browser.close();
     }
+
 }

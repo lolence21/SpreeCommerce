@@ -11,6 +11,7 @@ on:
 
 jobs:
   test:
+    name: Spree Commerce Test Scenario
     runs-on: windows-latest
 
     steps:
