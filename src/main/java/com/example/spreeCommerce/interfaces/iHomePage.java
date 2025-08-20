@@ -7,4 +7,6 @@ public interface iHomePage {
     void clickSearch();
     void enterSearchProduct(String searchProduct);
     String getSearchResultText(String productName);
+    void clickUserIcon();
+    boolean verifySignedUpSuccess();
 }
