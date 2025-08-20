@@ -1,0 +1,44 @@
+name: Spree Commerce CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Playwright + browsers
+        run: |
+          npm install -g playwright
+          playwright install --with-deps
+
+      - name: Install Maven dependencies
+        run: mvn install -DskipTests
+
+      - name: Run TestNG Tests
+        run: mvn clean test -DsuiteXmlFile="src/test/resources/testng-spree-commerce.xml"
+
+      - name: Upload Extent Report and Screenshots
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: ExtentReport
+          path: reports/**
