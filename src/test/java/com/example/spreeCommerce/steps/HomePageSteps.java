@@ -4,11 +4,11 @@ import com.example.spreeCommerce.pages.BasePage;
 import com.example.spreeCommerce.pages.HomePage;
 import com.example.spreeCommerce.utils.ExtentManager;
 import io.cucumber.java.en.Given;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HomePageSteps extends BasePage {
 
