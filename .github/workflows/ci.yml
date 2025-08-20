@@ -3,12 +3,10 @@ name: Spree Commerce CI
 on:
   push:
     branches:
-      - main
-      - release-*
+      - master
   pull_request:
     branches:
-      - main
-      - release-*
+      - master
   workflow_dispatch:
 
 jobs:
