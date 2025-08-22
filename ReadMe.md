@@ -125,10 +125,3 @@ This project was developed using:
 ```bash
     logs/
 ```
----
-
-## 📝 Configuration Details
-    - config.properties supports: 
-```bash
-    logs/
-```
