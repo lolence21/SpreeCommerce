@@ -1,12 +1,11 @@
 package com.example.spreeCommerce.interfaces;
 
 public interface iLoginPage {
-    boolean verifyLoginPage();
+    String getLoginPageTitle();
     void enterEmail(String email);
     void enterPassword(String password);
     void enterPasswordConfirmation(String confirmPassword);
     void clickSignup();
-    void clickLogin();
     void clickLoginButton();
     void clickSignupButton();
 }

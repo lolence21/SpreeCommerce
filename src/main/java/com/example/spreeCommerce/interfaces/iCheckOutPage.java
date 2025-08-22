@@ -1,18 +1,21 @@
 package com.example.spreeCommerce.interfaces;
 
-import java.util.List;
+import java.util.Map;
 
 public interface iCheckOutPage {
 
-    boolean verifyAddressSection();
-    void enterShippingAddress(List<String> address);
+    String getAddressSectionText();
+    void enterShippingAddress(Map<String, String> address);
+    String getShippingAddress();
 
-    boolean verifyDeliverySection();
+    String getDeliverySectionText();
     void selectShippingMethod(String method);
+    String getShippingPrice(String method);
+    String getDeliveryMethod();
 
-    boolean verifyPaymentSection();
+    String getPaymentSectionText();
     void selectPaymentOption(String option);
-    void enterStripeDetails(List<String> stripeDetails);
+    Map<String, String> enterStripeDetails();
 
     void clickSaveAndContinue();
 

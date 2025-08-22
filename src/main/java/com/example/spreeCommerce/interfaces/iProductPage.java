@@ -1,9 +1,9 @@
 package com.example.spreeCommerce.interfaces;
 
 public interface iProductPage {
-    void verifyProductPage(String productName);
+    String getProductName();
     void chooseColor(String color);
     void chooseSize(String size);
-    void setQuantity(int quantity);
+    void setQuantity(String quantity);
     void clickAddToCart();
 }

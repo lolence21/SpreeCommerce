@@ -34,6 +34,13 @@ jobs:
           npm install -g playwright
           playwright install --with-deps
 
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v3
+        with:
+         path: ~/.m2/repository
+         key: maven-${{ hashFiles('**/pom.xml') }}
+         restore-keys: maven-
+
       - name: Install Maven dependencies
         run: mvn install -DskipTests
 

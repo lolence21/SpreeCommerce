@@ -2,15 +2,11 @@ package com.example.spreeCommerce.interfaces;
 
 public interface iHomePage {
 
-    String getHomePageTitle();
-    String getHomePageURL();
+    String navigateToSite();
     void clickSearch();
     void enterSearchProduct(String searchProduct);
-    String getSearchResultText(String productName);
     void clickProduct(String productName);
-
+    String getSearchProduct(String searchProduct);
     void clickUserIcon();
-    boolean verifySignedUpSuccess();
-    boolean verifySignedOutSuccess();
-    boolean verifySignedInSuccess();
+    String getFlashMessage();
 }
